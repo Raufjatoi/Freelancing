@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umar - AI Video Editor Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #004d00, #003300);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .electric-effect {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        .line {
+            stroke: #00ff00;
+            stroke-width: 2;
+            fill: none;
+        }
+    </style>
+</head>
+<body class="relative">
+    <!-- Electric Background Effect -->
+    <svg class="electric-effect">
+        <line x1="0" y1="50" x2="100%" y2="50" class="line"/>
+        <line x1="0" y1="150" x2="100%" y2="150" class="line"/>
+        <line x1="0" y1="250" x2="100%" y2="250" class="line"/>
+    </svg>
+
+    <!-- Portfolio Content -->
+    <div class="flex flex-col items-center justify-center min-h-screen text-center p-6">
+        <h1 class="text-4xl font-bold mb-4">Umar - AI Video Editor</h1>
+        <img src="umar-pic.jpg" alt="Umar's Picture" class="w-48 h-48 rounded-full shadow-lg border-4 border-green-500">
+        <p class="mt-4 text-lg">Crafting stunning AI-enhanced video edits with creativity and precision.</p>
+
+        <section class="mt-10 w-full max-w-4xl">
+            <h2 class="text-3xl font-semibold mb-4">My Work</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-green-900 p-4 rounded-lg shadow-lg">
+                    <img src="project1-thumbnail.jpg" alt="Project 1" class="w-full rounded">
+                    <p class="mt-2">AI-Enhanced Music Video</p>
+                </div>
+                <div class="bg-green-900 p-4 rounded-lg shadow-lg">
+                    <img src="project2-thumbnail.jpg" alt="Project 2" class="w-full rounded">
+                    <p class="mt-2">AI Motion Graphics</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        anime({
+            targets: '.line',
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeInOutSine',
+            duration: 2000,
+            delay: (el, i) => i * 500,
+            direction: 'alternate',
+            loop: true
+        });
+    </script>
+</body>
+</html>
