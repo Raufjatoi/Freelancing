@@ -4,15 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Professional Portfolio Showcase</title>
+  <title>Professional Portfolio Service</title>
 
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- AOS Animation Library -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-  <!-- FontAwesome for Icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
@@ -60,30 +57,40 @@
     .dropdown-menu a:hover {
       background-color: #374151;
     }
+    #purple:hover {
+      background-color: purple;
+    }
+    #yellow:hover {
+      background-color: rgb(92, 92, 14);
+    }
+    #red:hover {
+      background-color: red;
+    }
+    #pink:hover {
+      background-color: rgb(130, 82, 90);
+    }
   </style>
 </head>
 
 <body>
-  <!-- Dynamic Banner -->
   <div class="banner text-lg font-bold">
-    🚀 Get Your Portfolio Deployed for FREE! 🚀
+    Get Your Portfolio Deployed for FREE! 🚀
   </div>
 
-  <!-- Navbar -->
   <nav class="flex justify-between items-center p-4 bg-gray-900 shadow-md fixed w-full z-50 mt-16">
-    <h1 class="text-2xl font-bold text-sky-400">Your Professional Portfolio</h1>
+    <h1 class="text-2xl font-bold text-sky-400">Professional Portfolio Service</h1>
     <div class="md:hidden text-gray-300 cursor-pointer text-2xl" id="menu-toggle">☰</div>
     <ul class="hidden md:flex space-x-6 text-gray-300 md:items-center" id="navbar-menu">
       <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
       <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#articles" class="nav-link">Articles</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
       <li class="relative dropdown">
-        <a href="#" class="nav-link">Other Portfolios ▼</a>
+        <a href="#" class="nav-link">Other Services we Provide ▼</a>
         <div class="dropdown-menu">
-          <a href="/portfolios/ahsan.html" target="_blank">Ahsans Portfolio</a>
-          <a href="portfolios/umar.html" target="_blank">Umars Portfolio</a>
-          <a href="portfolios/rauf.html" target="_blank">Rauf Portfolio</a>
+          <a href="#" target="_blank">AI History Video and shorts</a>
+          <a href="#" target="_blank">AI Thumbnails and Art</a>
+          <a href="#" target="_blank">Machine Learning and Deep Learning Projects</a>
         </div>
       </li>
     </ul>
@@ -100,45 +107,48 @@
     });
   </script>
 
-  <!-- Home Section -->
   <section id="home" class="h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800" data-aos="fade-up">
     <div class="text-center">
       <h2 class="text-4xl md:text-6xl font-extrabold text-sky-400 animate-pulse">Elevate Your Brand with a Stunning Portfolio</h2>
-      <p class="mt-4 text-xl text-gray-400">Showcase your skills, projects, and articles like a pro!</p>
+      <p class="mt-4 text-xl text-gray-400">Showcase your skills, projects, Services, and Certificates like a pro!</p>
+        <button id="cta" class="mt-8 px-6 py-3 bg-sky-500 text-white rounded hover:bg-sky-600 transition-transform transform hover:scale-105">Start Your First order </button>
+      </a> 
+      <br> <br> 
+      <p> And make your products and services Stunning to others.</p> 
+      
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="p-8 bg-gray-800" data-aos="zoom-in-up">
-    <h2 class="text-3xl font-bold text-center text-sky-400">Featured Projects</h2>
+  <section id="portfolio" class="p-8 bg-gray-800" data-aos="zoom-in-up">
+    <h2 class="text-3xl font-bold text-center text-sky-400">Sample portfolios</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-      <div class="bg-gray-900 p-4 rounded-xl shadow-md hover:shadow-2xl transition-transform transform hover:scale-110">
-        <h3 class="text-xl font-semibold text-gray-200">Project Showcase</h3>
-        <p class="text-gray-400">Highlight your top projects with engaging visuals and links.</p>
-      </div>
-      <div class="bg-gray-900 p-4 rounded-xl shadow-md hover:shadow-2xl transition-transform transform hover:scale-110">
-        <h3 class="text-xl font-semibold text-gray-200">Innovative Solutions</h3>
-        <p class="text-gray-400">Demonstrate problem-solving and technical expertise.</p>
-      </div>
+      <a href="ahsan.html" target="_blank" class="bg-gray-900 p-4 rounded-xl shadow-md hover:shadow-2xl transition-transform transform hover:scale-110" id="yellow">
+        <h3 class="text-xl font-semibold text-gray-200">Ahsans Portfolio</h3>
+        <p class="text-gray-400">Ecommerce and Ai thumbnail creator</p>
+      </a>
+      <a href="umar.html" target="_blank" class="bg-gray-900 p-4 rounded-xl shadow-md hover:shadow-2xl transition-transform transform hover:scale-110" id="purple">
+        <h3 class="text-xl font-semibold text-gray-200">Umars Portfolio</h3>
+        <p class="text-gray-400">AI Video editor</p>
+      </a>
+      <a href="https://personal-web-page-lemon.vercel.app" target="_blank" class="bg-gray-900 p-4 rounded-xl shadow-md hover:shadow-2xl transition-transform transform hover:scale-110" id="red">
+        <h3 class="text-xl font-semibold text-gray-200">Raufs Portfolio <strong>(Deployed on vercel)</strong></h3>
+        <p class="text-gray-400">Web Developer and AI engineer</p>
+      </a>
     </div>
   </section>
 
-  <!-- Articles Section -->
-  <section id="articles" class="p-8 bg-gray-900" data-aos="fade-left">
-    <h2 class="text-3xl font-bold text-center text-sky-400">Insightful Articles</h2>
+  <section id="projects" class="p-8 bg-gray-900" data-aos="fade-left" item>
+    <h2 class="text-3xl font-bold text-center text-sky-400">Projects we done so far</h2>
     <div class="mt-6 space-y-4">
-      <div class="bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-2xl transition-transform transform hover:scale-105">
-        <h3 class="text-xl font-semibold text-gray-200">Tech Trends 2025</h3>
-        <p class="text-gray-400">Stay ahead with the latest industry insights.</p>
-      </div>
-      <div class="bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-2xl transition-transform transform hover:scale-105">
-        <h3 class="text-xl font-semibold text-gray-200">Mastering Frameworks</h3>
-        <p class="text-gray-400">Deep dives into modern development frameworks.</p>
+      <div class="bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-2xl transition-transform transform hover:scale-105" id="pink">
+        <img src="imgs/image.png" alt="Article Image" class="rounded-full w-32 h-32 mx-auto hover:opacity-75 transition-opacity duration-300">
+        <h3 class="text-xl font-semibold text-gray-200 mt-4">English Course By Elsa Portfolio website</h3>
+                <p class="text-gray-400">"The website they created for me increased my online presence. Now I have something to show to my clients and others about my work and services i provide." - Elsa</p> 
+        <a href="https://elsa-ivory.vercel.app/" target="_blank" class="block mt-4 text-sky-400 hover:underline">Chect out the client website we create 😊</a>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="p-8 bg-gray-800" data-aos="fade-right">
     <h2 class="text-3xl font-bold text-center text-sky-400">Get In Touch</h2>
     <form class="mt-6 max-w-md mx-auto space-y-4">
@@ -149,19 +159,16 @@
     </form>
   </section>
 
-  <!-- Footer -->
   <footer class="bg-gray-900 text-center p-4 text-gray-400">
-    © 2025 Professional Portfolio | Built with ❤️ to Showcase Your Talent
+    © 2025 Professional Portfolio Service | Build and Designed by Abdul Rauf Jatoi
   </footer>
 
-  <!-- AOS JS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
 
-    // Dynamic Banner Message
     const banner = document.querySelector('.banner');
-    const messages = ["🚀 Get Your Portfolio Deployed for FREE! 🚀", "💼 Impress Clients with a Stunning Portfolio! 💼"];
+    const messages = ["Impress peoples with a Stunning Portfolio! 💼" , "Show case your service to clients 💹"];
     let index = 0;
     setInterval(() => {
       index = (index + 1) % messages.length;
