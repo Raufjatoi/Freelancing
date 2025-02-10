@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI thumbnails </title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .nav-link:hover {
+      color: #58a6ff;
+      transition: color 0.3s ease;
+    }
+    .banner {
+      background: linear-gradient(90deg, #58a6ff, #0d1117);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      animation: fadeBanner 5s infinite alternate;
+    }
+    @keyframes fadeBanner {
+      0% {opacity: 1;}
+      100% {opacity: 0.3;}
+    }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #1f2937;
+      min-width: 150px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-menu a {
+      color: #c9d1d9;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-menu a:hover {
+      background-color: #374151;
+    }
+    #purple:hover {
+      background-color: purple;
+    }
+    #yellow:hover {
+      background-color: rgb(92, 92, 14);
+    }
+    #red:hover {
+      background-color: red;
+    }
+    #pink:hover {
+      background-color: rgb(130, 82, 90);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="banner text-lg font-bold">
+    AI Attractive thumbnails for your Youtube Videos 🖼️
+  </div>
+  <a href="index.html" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300 inline-block text-center">Back</a>
+
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbarMenu = document.getElementById('navbar-menu');
+
+    menuToggle.addEventListener('click', () => {
+      navbarMenu.classList.toggle('hidden');
+      navbarMenu.classList.toggle('flex');
+      navbarMenu.classList.add('flex-col', 'bg-gray-900', 'w-full', 'p-4', 'space-y-4');
+    });
+  </script>
+
+  <section id="home" class="h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800" data-aos="fade-up">
+    <div class="text-center">
+      <h2 class="text-4xl md:text-6xl font-extrabold text-sky-400 animate-pulse">Coming Soon 😊</h2>
+      
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-center p-4 text-gray-400">
+    © 2025 Professional Portfolio Service | Build and Designed by Abdul Rauf Jatoi
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const banner = document.querySelector('.banner');
+    const messages = ["Nice Attractive thumbnail to get more viewers to your channel", "Color effects and Multiple choices to choice"];
+    let index = 0;
+    setInterval(() => {
+      index = (index + 1) % messages.length;
+      banner.textContent = messages[index];
+    }, 5000);
+  </script>
+</body>
+
+</html>
